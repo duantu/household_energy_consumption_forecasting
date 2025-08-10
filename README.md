@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 Executive Summary
+## Executive Summary
 
 This project investigates the use of deep learning models to forecast household power consumption in the United Kingdom (UK). With shifting energy consumption patterns, population growth, and increasing reliance on sustainable energy, accurate demand forecasting is becoming essential.
 
@@ -65,25 +65,6 @@ We implemented and compared **two sequence-to-sequence LSTM forecasting models**
 - Repeat Vector
 - Decoder: LSTM (64 units)
 - Output: 48 time steps (next day’s 30-minute intervals)
-
----
-
-## Results & Discussion
-
-- LSTM models **capture overall trends** and generalize well to unseen households.
-- **Limitations:**
-  - Struggles with sharp consumption changes
-  - Seasonal patterns (e.g., winter vs. summer) not fully captured without additional features
-  - Potential performance degradation for very large household counts without optimization
-
----
-
-## 🚀 Future Directions
-
-- **Train on larger household samples** for improved generalization
-- **Use bidirectional LSTMs** to capture dependencies in both temporal directions
-- **Integrate additional features**: weather, occupancy, holiday effects
-- **Increase input & forecast horizons** for multi-day prediction capability
 
 ---
 
