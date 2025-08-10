@@ -25,7 +25,7 @@ We explore whether training deep learning models on representative households ca
 
 ## Data
 
-**Source:** [Low Carbon London Project](link)  
+**Source:** [Low Carbon London Project](https://huggingface.co/datasets/OpenSynth/TUDelft-Electricity-Consumption-1.0)
 - **Original dataset:** 5,567 households in London, November 2011 – February 2014  
 - **Resolution:** 30-minute intervals (48 time steps/day)  
 - **Size:** ~10 GB
