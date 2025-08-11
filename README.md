@@ -58,6 +58,9 @@ We explore whether training deep learning models on representative households ca
 We implemented and compared **two sequence-to-sequence LSTM forecasting models**:
 1. **Model 1:** Trained on the first five households (after separating test set)
 2. **Model 2:** Trained on five representative households selected via clustering
+For Models 1 and 2, we used two different types of performance calculations.
+Short Term (7 days input 1 day forecast): Generate all possible 336 time-steps → 48 time-step input/output pairs with one time-step sliding window; every forecast window uses true past values (never previous predictions), and predicts all 48 time-steps for each window, compute MSE over all points per household, then average.
+Long Term (Autoregressive rolling-based fixed 30-day forecast): Starting with 336 actual time-steps as the first input, predict the next 48 points (1 day ahead), appending predictions to history and using them for the next day’s forecast, till we reach the 30-day forecast. Compare predictions to actuals for the total time, compute MSE per household, then average.
 
 **Architecture:**
 - Input: 336 time steps (7 days), 1 consumption feature, 6 engineered time features
